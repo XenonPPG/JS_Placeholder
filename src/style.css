@@ -53,6 +53,12 @@ button:hover {
     cursor: pointer;
 }
 
+button:active{
+    background-color: rgb(224, 224, 224);
+    border: var(--Border) rgb(224, 224, 224);
+    transition: 50ms;
+}
+
 #output {
     background-color: var(--Dark);
     border: var(--Border);
