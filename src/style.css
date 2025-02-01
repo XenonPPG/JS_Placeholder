@@ -127,3 +127,6 @@ button:active{
     padding: 10px;
     font-size: 20px;
 }
+::placeholder{
+    color: gray;
+}
