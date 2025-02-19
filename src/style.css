@@ -11,7 +11,6 @@
     src: url(HomeVideo-Regular.otf);
 }
 
-
 body {
     background-color: var(--Light);
     font-family: pixel;
@@ -53,7 +52,7 @@ button:hover {
     cursor: pointer;
 }
 
-button:active{
+button:active {
     background-color: rgb(224, 224, 224);
     border: var(--Border) rgb(224, 224, 224);
     transition: 50ms;
@@ -66,16 +65,20 @@ button:active{
     padding: 10px;
     color: white;
     width: 500px;
-    height: 200px;
+    /* height: 200px; */
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
-.gear{
+
+.gear {
     position: fixed;
     filter: invert(17%);
     z-index: -1000;
 }
+
 #gear1 {
     width: 1500px;
     left: 800px;
@@ -88,7 +91,7 @@ button:active{
     top: -300px;
 }
 
-#gear3{
+#gear3 {
     width: 500px;
     left: 20px;
     top: 500px;
@@ -127,6 +130,7 @@ button:active{
     padding: 10px;
     font-size: 20px;
 }
-::placeholder{
+
+::placeholder {
     color: gray;
 }
