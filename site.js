@@ -148,8 +148,8 @@ function ShowToast(title, content, timeout = 3000) {
         <p>${content}</p>
     `;
 
-    // Добавляем в начало контейнера
-    toastContainer.insertBefore(toast, toastContainer.firstChild);
+    // Добавляем в контейнер
+    toastContainer.appendChild(toast);
 
     // Анимация появления
     setTimeout(() => {
@@ -159,7 +159,7 @@ function ShowToast(title, content, timeout = 3000) {
 
     // Закрытие
     const closeToast = () => {
-        toast.style.transform = "translateY(-20px)";
+        toast.style.transform = "translateY(50px)";
         toast.style.opacity = "0";
         setTimeout(() => toast.remove(), 300);
     };
@@ -176,12 +176,13 @@ function createToastContainer() {
     container.id = "toast-container";
     container.style.cssText = `
         position: fixed;
-        top: 20px;
-        right: 20px;
+        bottom: 20px;
+        right: 30px; /* Смещение влево на 10px */
         z-index: 1000;
         display: flex;
-        flex-direction: column-reverse;
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end;
     `;
     document.body.appendChild(container);
     return container;
